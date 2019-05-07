@@ -1,0 +1,45 @@
+{
+  "name": "pm2-conf",
+  "version": "0.0.0",
+  "description": "Simple PM2 ecosystem builder",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "pm2",
+    "ecosystem",
+    "config"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/pm2-conf.git"
+  },
+  "author": {
+    "email": "d.vladimyr+dev@gmail.com",
+    "name": "Dario Vladovic",
+    "url": "https://github.com/vladimyr"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vladimyr/pm2-conf/issues"
+  },
+  "homepage": "https://github.com/vladimyr/pm2-conf",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "kleur": "^3.0.3",
+    "read-pkg-up": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-semistandard": "^13.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0"
+  }
+}
