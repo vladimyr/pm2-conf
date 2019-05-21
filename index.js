@@ -21,11 +21,27 @@ if (error) {
   process.exit(1);
 }
 
+/**
+ * Builds pm2 ecosystem configuration
+ * @alias buildConfig
+ * @param {StartOptions} [options={}] app start options
+ * @return {array<StartOptions>} pm2 configuration
+ * @example
+ * const buildConfig = require('pm2-conf');
+ * buildConfig({ name: 'my-app', script: require.resolve('./server') });
+ * //=> pm2 ecosystem configuration
+ */
 module.exports = (options = {}) => {
   const envConfig = readEnvConfig();
   const config = Object.assign({ name: pkg.name }, pkg.pm2, envConfig, options);
   return [config];
 };
+
+/**
+ * @name StartOptions
+ * @typedef {import('pm2').StartOptions} StartOptions
+ * @see https://github.com/Unitech/pm2/blob/3.5.0/types/index.d.ts#L294-L407
+ */
 
 function readEnvConfig(env = process.env) {
   return Object.entries(env).reduce((config, [key, value]) => {
